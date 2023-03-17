@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Enter file name"
+read filename
+echo "Enter command"
+read command
+touch $filename
+cat << EOF > $filename
+$command
+EOF
+chmod u+x $filename
+nano $filename
